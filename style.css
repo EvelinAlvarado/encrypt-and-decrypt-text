@@ -1,0 +1,134 @@
+body {
+  background: #F3F5FC;
+}
+
+header {
+  width: 940px;/*porque comunmente las pantallas tienen 1280px, queremos ocupar el 70% aproximadamente*/
+  position: relative;
+  margin: 0 auto; /*auto a los lados para que el navegador calcule los espacios si la resolucion de la pantalla no fuese 1280px*/
+}
+
+.logo-alura {
+  position: absolute;
+  width: 120px;
+  height: 48px;
+  left: 40px;
+  top: 40px;
+}
+
+main {
+  width: 940px;/*porque comunmente las pantallas tienen 1280px, queremos ocupar el 70% aproximadamente*/
+  position: relative;
+  display: flex;
+  margin: 0 auto; /*auto a los lados para que el navegador calcule los espacios si la resolucion de la pantalla no fuese 1280px*/
+}
+
+textarea {
+  /*tamaño y posición*/
+  position: absolute;
+  width: 577px;
+  height: 48px;
+  left: 240px;
+  top: 168px;
+  background: #F3F5FC;
+  border: none;
+
+  /*color del texto*/
+  color: #0A3871;
+  /*características de la fuente*/
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+
+}
+
+.aviso-advertencia {
+  position: absolute;
+  display: flex;
+  width: 229px;
+  height: 18px;
+  left: 240px;
+  top: 851px;
+  /*letra*/
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #495057;
+  opacity: 0.8;
+}
+
+img [src="exclamation"] {
+  margin-right: 8px;
+}
+
+.boton-encriptar-desencriptar {
+  position: absolute;
+  width: 680px;
+  height: 67px;
+  left: 240px;
+  top: 885px;
+  display: flex;
+
+}
+
+.boton-encriptar {
+  width: 328px;
+  height: 67px;
+  background: #0A3871;
+  border: 1px solid #0A3871;
+  border-radius: 24px;
+  padding: 24px;
+  margin-right: 12px;
+  /*letra*/
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.boton-desencriptar {
+  width: 328px;
+  height: 67px;
+  background: #D8DFE8;
+  border: 1px solid #0A3871;
+  border-radius: 24px;
+  padding: 24px;
+  margin-left: 12px;
+  /*letra*/
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #0A3871;
+
+}
+
+.contenedor-desencriptador {
+  /*Rectángulo*/
+  position: absolute;
+  width: 400px;
+  height: 944px;
+  left: 1000px;
+  top: 40px;
+
+  /*color White*/
+  background: #FFFFFF;
+  /*shadow*/
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  /*borde redondeado*/
+  border-radius: 32px;
+}
+
+footer {
+  text-align: center;
+  position: relative;
+}
