@@ -62,7 +62,7 @@ textarea {
 }
 
 img [src="exclamation"] {
-  margin-right: 8px;
+  margin-right: 8px; /*no funciona*/
 }
 
 .boton-encriptar-desencriptar {
