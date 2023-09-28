@@ -1,55 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width"><!--le dice al navegador que adapte la pag para dispositivos moviles-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Encriptador de texto</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <!-- 
-  --Área para mostrar el texto encriptado/desencriptado.
 
-  Extra!
-  --Un rodapie con los datos de la persona que desarrolló el sitio web!-->
   <body>
-
     <header>
-      <img class="logo-alura" src="imagenes/logo-alura.png" alt="Logo de Alura">
+      <!-- class="contenedor-logo" -->
+      <img src="imagenes/logo.svg" alt="Logo de Alura" />
     </header>
 
-    <main>
-      
-      <section>
-        <textarea id="texto" name="texto" required>Ingrese el texto aquí</textarea>
-        
-        <div class="aviso-advertencia">
-          <img src="imagenes/bi_exclamation-circle-fill.png" alt="Simbolo de advertencia">
-          <p>Solo letras minúsculas y sin acentos</p>
-        </div>
-        
-        <div class="boton-encriptar-desencriptar">
-          <button class="boton-encriptar">Encriptar</button>
-          <button class="boton-desencriptar">Desencriptar</button>
+    <main class="contenedor-principal">
+      <!-- section 1 -->
+      <section class="contenedor-encriptador-input">
+        <div class="contenedor-encriptador-texto">
+          <textarea
+            id="texto"
+            name="texto"
+            placeholder="Ingrese el texto aquí"
+            required
+          ></textarea>
         </div>
 
-        <!--<input type="button" value="Encriptar">
-        <input type="button" value="Desencriptar">-->
-      </section>
-      
-      <section class="contenedor-desencriptador">
-        <img src="imagenes/munheco.png" alt="Muñeco">
-        <p>Ningún mensaje fue encontrado</p>
-        <p>Ingresa el texto que desees encriptar o desencriptar</p>
+        <div class="contenedor-encriptador-botones">
+          <div class="indicaciones">
+            <!-- cambiar clase -->
+            <img
+              src="imagenes/bi_exclamation-circle-fill.png"
+              alt="Simbolo de advertencia"
+            />
+            <p>Solo letras minúsculas y sin acentos</p>
+          </div>
+
+          <div class="boton-encriptar-desencriptar">
+            <button class="boton-encriptar">Encriptar</button>
+            <button class="boton-desencriptar">Desencriptar</button>
+          </div>
+        </div>
       </section>
 
+      <!-- section 2 -->
+      <section class="contenedor-encriptador-output">
+        <!-- class="contenedor-desencriptador" -->
+        <!-- <img src="imagenes/munheco.png" alt="Muñeco" /> sOLO PARA TABLET Y DESKTOP-->
+        <p class="titulo-mensaje">Ningún mensaje fue encontrado</p>
+        <p class="ingresa-mensaje">
+          Ingresa el texto que desees encriptar o desencriptar
+        </p>
+        <!-- show results and copy button  -->
+        <!-- <div class="resultado-encriptador-desencriptador" id="resultsSection">
+          <textarea id="texto-resultado" name="texto-resultado"></textarea>
+          <button class="copy-button" onclick="copyText()" id="copyButton">Copiar</button>
+        </div> -->
+      </section>
+
+      <footer class="footer">
+        <!-- Social media -->
+        <div class="SocialLayout">
+          <img src="./imagenes/github-logo.svg" alt="Github logo" /><a
+            href="#"
+            class="SocialItem"
+            target="_blank"
+            rel="noreferrer"
+          ></a>
+          <img src="./imagenes/linkedin-logo.svg" alt="LinkedIn logo" /><a
+            href="#"
+            class="SocialItem"
+            target="_blank"
+            rel="noreferrer"
+          ></a>
+        </div>
+        <!-- copyright -->
+        <p><small>&copy; Copyright Evelin Alvarado - 2023</small></p>
+      </footer>
     </main>
-
-    <footer>
-      <p><small>&copy; Copyright Evelin Alvarado - 2023</small></p>
-    </footer>
   </body>
 </html>

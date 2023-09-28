@@ -1,0 +1,189 @@
+:root {
+  --background-color: #f3f5fc;
+  --background-color-texto-encriptador: #fff;
+  --background-boton-azul: #0a3871;
+  --border-color-boton-azul: #0a3871;
+  --font-family-inter: "Inter", sans-serif;
+  --font-color-azul: #0a3871;
+  --font-color-grey: #495057;
+  --font-color-grey-oscuro: #343a40;
+  --font-color-white: #ffffff;
+}
+
+body {
+  background: var(--background-color, white);
+  font-family: var(--font-family-inter);
+}
+
+header {
+  /* background-color: yellow; */
+  margin: 0 5%;
+  padding: 5% 0 10%;
+}
+
+main {
+  /* width: 940px;  */ /*porque comunmente las pantallas tienen 1280px, queremos ocupar el 70% aproximadamente*/
+  /* margin: auto; */ /*auto a los lados para que el navegador calcule los espacios si la resolucion de la pantalla no fuese 1280px*/
+  margin: 0 5%;
+}
+
+.contenedor-encriptador-input {
+  /* background-color: rosybrown; */
+  padding-bottom: 10%;
+}
+
+.contenedor-encriptador-texto {
+  padding-bottom: 30%;
+}
+
+.contenedor-encriptador-texto textarea {
+  width: 100%;
+  height: 15rem;
+  background-color: var(--background-color);
+  font-size: 2rem;
+  font-family: var(--font-family-inter);
+  color: var(--font-color-azul);
+  font-weight: 400;
+  line-height: 3rem;
+  border-style: none;
+  resize: none;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: var(--font-color-azul);
+}
+
+.indicaciones {
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.indicaciones img {
+  padding-right: 0.5rem;
+  height: 1rem;
+}
+
+.indicaciones p {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--font-color-grey);
+}
+
+.boton-encriptar {
+  background-color: var(--background-boton-azul);
+  border-radius: 24px;
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  border-style: none;
+  font-family: var(--font-family-inter);
+  font-size: 1rem;
+  color: var(--font-color-white);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.boton-desencriptar {
+  border-radius: 24px;
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color-boton-azul);
+  font-family: var(--font-family-inter);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--font-color-azul);
+}
+
+.contenedor-encriptador-output {
+  /* background-color: rebeccapurple; */
+  height: 15rem;
+  margin-bottom: 10%;
+  background-color: var(--background-color-texto-encriptador);
+  border-radius: 32px;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titulo-mensaje {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--font-color-grey-oscuro);
+  margin-bottom: 1rem;
+  line-height: 1.8rem;
+}
+
+.ingresa-mensaje {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--font-color-grey);
+  line-height: 1.5rem;
+}
+
+.footer {
+  text-align: center;
+  padding-bottom: 5%;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--font-color-grey);
+}
+
+.SocialLayout {
+  padding-bottom: 5%;
+}
+
+.SocialLayout img {
+  width: 1.5rem;
+}
+
+/* textarea {
+  tamaño y posición
+  position: absolute;
+  width: 577px;
+  height: 48px;
+  left: 240px;
+  top: 168px;
+  background: #f3f5fc;
+  border: none;
+
+  color del texto
+  color: #0a3871;
+  características de la fuente
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+} */
+
+/* .boton-encriptar-desencriptar {
+  position: absolute;
+  width: 680px;
+  height: 67px;
+  left: 240px;
+  top: 885px;
+  display: flex;
+} */
+
+/* @media (max-width:768px) {
+  .contenedor {
+    display: inline-block;
+  }
+
+  .contenedor-logo {
+    width: 100%
+  }
+
+  .contenedor-encriptador-input {
+    width: 100%
+  }
+
+  .contenedor-encriptador-output {
+    width: 100%;
+  }
+} */
