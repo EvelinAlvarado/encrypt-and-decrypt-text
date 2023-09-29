@@ -18,52 +18,53 @@
 
   <body>
     <header>
-      <!-- class="contenedor-logo" -->
       <img src="imagenes/logo.svg" alt="Logo de Alura" />
     </header>
 
     <main class="contenedor-principal">
-      <!-- section 1 -->
-      <section class="contenedor-encriptador-input">
-        <div class="contenedor-encriptador-texto">
-          <textarea
-            id="texto"
-            name="texto"
-            placeholder="Ingrese el texto aquí"
-            required
-          ></textarea>
-        </div>
-
-        <div class="contenedor-encriptador-botones">
-          <div class="indicaciones">
-            <!-- cambiar clase -->
-            <img
-              src="imagenes/bi_exclamation-circle-fill.png"
-              alt="Simbolo de advertencia"
-            />
-            <p>Solo letras minúsculas y sin acentos</p>
+      <section class="contenedor">
+        <!-- section 1 -->
+        <section class="contenedor-encriptador-input">
+          <div class="contenedor-encriptador-texto">
+            <textarea
+              id="texto"
+              name="texto"
+              placeholder="Ingrese el texto aquí"
+              required
+            ></textarea>
           </div>
 
-          <div class="boton-encriptar-desencriptar">
-            <button class="boton-encriptar">Encriptar</button>
-            <button class="boton-desencriptar">Desencriptar</button>
-          </div>
-        </div>
-      </section>
+          <div class="contenedor-encriptador-botones">
+            <div class="indicaciones">
+              <!-- cambiar clase -->
+              <img
+                src="imagenes/bi_exclamation-circle-fill.png"
+                alt="Simbolo de advertencia"
+              />
+              <p>Solo letras minúsculas y sin acentos</p>
+            </div>
 
-      <!-- section 2 -->
-      <section class="contenedor-encriptador-output">
-        <!-- img solo para tablet y desktop -->
-        <img src="imagenes/munheco.png" alt="Muñeco" class="imagen-munheco" />
-        <p class="titulo-mensaje">Ningún mensaje fue encontrado</p>
-        <p class="ingresa-mensaje">
-          Ingresa el texto que desees encriptar o desencriptar
-        </p>
-        <!-- show results and copy button  -->
-        <!-- <div class="resultado-encriptador-desencriptador" id="resultsSection">
+            <div class="boton-encriptar-desencriptar">
+              <button class="boton-encriptar">Encriptar</button>
+              <button class="boton-desencriptar">Desencriptar</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- section 2 -->
+        <section class="contenedor-encriptador-output">
+          <!-- img solo para tablet y desktop -->
+          <img src="imagenes/munheco.png" alt="Muñeco" class="imagen-munheco" />
+          <p class="titulo-mensaje">Ningún mensaje fue encontrado</p>
+          <p class="ingresa-mensaje">
+            Ingresa el texto que desees encriptar o desencriptar
+          </p>
+          <!-- show results and copy button  -->
+          <!-- <div class="resultado-encriptador-desencriptador" id="resultsSection">
           <textarea id="texto-resultado" name="texto-resultado"></textarea>
           <button class="copy-button" onclick="copyText()" id="copyButton">Copiar</button>
         </div> -->
+        </section>
       </section>
 
       <footer class="footer">
