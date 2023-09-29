@@ -18,7 +18,7 @@ body {
 header {
   /* background-color: yellow; */
   margin: 0 5%;
-  padding: 5% 0 10%;
+  padding: 5% 0 5%;
 }
 
 main {
@@ -33,18 +33,18 @@ main {
 }
 
 .contenedor-encriptador-texto {
-  padding-bottom: 30%;
+  height: 50vh;
 }
 
 .contenedor-encriptador-texto textarea {
   width: 100%;
-  /* height: 15rem; */
+  height: 90%;
   background-color: var(--background-color);
   font-size: 2rem;
   font-family: var(--font-family-inter);
   color: var(--font-color-azul);
   font-weight: 400;
-  line-height: 3rem;
+  line-height: normal;
   border-style: none;
   resize: none;
   outline: none;
@@ -200,6 +200,11 @@ textarea::placeholder {
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .contenedor-encriptador-texto textarea {
+    height: 95%;
+  }
+
   .contenedor-encriptador-output {
     display: flex;
     flex-direction: column;
