@@ -2,6 +2,8 @@
   --background-color: #f3f5fc;
   --background-color-texto-encriptador: #fff;
   --background-boton-azul: #0a3871;
+  --background-boton-azul-hover: #05213c;
+  --background-boton-desencriptar-hover: #dce0f0;
   --border-color-boton-azul: #0a3871;
   --font-family-inter: "Inter", sans-serif;
   --font-color-azul: #0a3871;
@@ -82,6 +84,12 @@ textarea::placeholder {
   color: var(--font-color-white);
   margin-bottom: 1.5rem;
   font-weight: 400;
+  transition: all 0.2s ease-in-out;
+}
+
+.boton-encriptar:hover {
+  cursor: pointer;
+  background: var(--background-boton-azul-hover);
 }
 
 .boton-desencriptar {
@@ -94,20 +102,21 @@ textarea::placeholder {
   font-size: 1rem;
   font-weight: 400;
   color: var(--font-color-azul);
+  transition: all 0.1s ease-in-out;
+}
+
+.boton-desencriptar:hover {
+  cursor: pointer;
+  background: var(--background-boton-desencriptar-hover);
 }
 
 .contenedor-encriptador-output {
-  /* background-color: rebeccapurple; */
-  /* height: 15rem; */
   margin-bottom: 10%;
   background-color: var(--background-color-texto-encriptador);
   border-radius: 32px;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   padding: 2rem;
   text-align: center;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
 }
 
 .imagen-munheco {
@@ -220,54 +229,6 @@ textarea::placeholder {
   }
 
   .footer {
-    /* position: fixed;
-    left: 0;
-    right: 0; */
+    width: 100vh;
   }
 }
-/* textarea {
-  tamaño y posición
-  position: absolute;
-  width: 577px;
-  height: 48px;
-  left: 240px;
-  top: 168px;
-  background: #f3f5fc;
-  border: none;
-
-  color del texto
-  color: #0a3871;
-  características de la fuente
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 150%;
-} */
-
-/* .boton-encriptar-desencriptar {
-  position: absolute;
-  width: 680px;
-  height: 67px;
-  left: 240px;
-  top: 885px;
-  display: flex;
-} */
-
-/* @media (max-width:768px) {
-  .contenedor {
-    display: inline-block;
-  }
-
-  .contenedor-logo {
-    width: 100%
-  }
-
-  .contenedor-encriptador-input {
-    width: 100%
-  }
-
-  .contenedor-encriptador-output {
-    width: 100%;
-  }
-} */
