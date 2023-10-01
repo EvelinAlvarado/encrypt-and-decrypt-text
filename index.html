@@ -27,6 +27,7 @@
         <section class="contenedor-encriptador-input">
           <div class="contenedor-encriptador-texto">
             <textarea
+              class="textarea-input"
               id="texto"
               name="texto"
               placeholder="Ingrese el texto aquí"
@@ -59,11 +60,18 @@
           <p class="ingresa-mensaje">
             Ingresa el texto que desees encriptar o desencriptar
           </p>
+
           <!-- show results and copy button  -->
-          <!-- <div class="resultado-encriptador-desencriptador" id="resultsSection">
-          <textarea id="texto-resultado" name="texto-resultado"></textarea>
-          <button class="copy-button" onclick="copyText()" id="copyButton">Copiar</button>
-        </div> -->
+          <div class="resultado-encriptador-desencriptador">
+            <div class="resultado-textarea">
+              <textarea
+                class="textarea-output"
+                name="resultado-texto"
+              ></textarea>
+            </div>
+            <button class="copy-button" id="copyButton">Copiar</button>
+            <!-- onclick="copyText() -->
+          </div>
         </section>
       </section>
 
