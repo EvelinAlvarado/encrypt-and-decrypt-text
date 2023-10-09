@@ -254,7 +254,7 @@ main {
     display: inline-block;
     margin: 0 0 0 5%;
     padding-right: 3.5rem;
-    padding-top: 4%;
+    padding-top: 2%;
     padding-bottom: 0%;
   }
 
@@ -264,8 +264,8 @@ main {
   .contenedor {
     display: flex;
     justify-content: space-between;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
   }
 
   .contenedor-encriptador-input {
