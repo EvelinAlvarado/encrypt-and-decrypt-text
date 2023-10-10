@@ -24,8 +24,20 @@ Extras:
 Un botón que copie el texto encriptado/desencriptado para la sección de transferencia, o sea que tenga la misma funcionalidad del ctrl+C o de la opción "copiar" del menú de las aplicaciones.
  */
 
-/* Function to toggle content display when the "Encrypt" button is clicked */
-function toggleContent() {
+/* Function to encrypt input and display the result */
+function encryptAndDisplayResult() {
+  // Capture the text from the input textarea
+  const inputTexarea = document.querySelector(".textarea-input");
+  const inputValue = inputTexarea.value;
+
+  // Encrypt the input text
+  const encrytedValue = encryptedMessage(inputValue);
+
+  // Display the encrypted text in the output textarea
+  const outputTextarea = document.querySelector(".textarea-output");
+  outputTextarea.value = encrytedValue;
+
+  // show display when the "Encrypt" button is clicked
   var contenidoInicial = document.querySelector(".encriptador-output-inicial");
   var contenidoEncriptado = document.querySelector(
     ".resultado-encriptador-desencriptador"
@@ -35,9 +47,9 @@ function toggleContent() {
   contenidoEncriptado.style.display = "flex";
 }
 
-/* Add a click event listener to the "Encrypt" button to toggle content */
+/* Add a click event listener to the "Encrypt" button */
 var botonEncriptar = document.querySelector(".boton-encriptar");
-botonEncriptar.addEventListener("click", toggleContent);
+botonEncriptar.addEventListener("click", encryptAndDisplayResult);
 
 /* Definition of an object that contains substitutions for vowels. */
 const substitutionVowels = {
@@ -60,5 +72,3 @@ function encryptedMessage(message) {
     })
     .join("");
 }
-
-console.log(encryptedMessage("hola hola"));
