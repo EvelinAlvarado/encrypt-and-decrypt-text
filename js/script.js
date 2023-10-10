@@ -25,7 +25,7 @@ Un botón que copie el texto encriptado/desencriptado para la sección de transf
  */
 
 /* Function to encrypt input and display the result */
-function encryptAndDisplayResult() {
+/* function encryptAndDisplayResult() {
   // Capture the text from the input textarea
   const inputTexarea = document.querySelector(".textarea-input");
   const inputValue = inputTexarea.value;
@@ -45,11 +45,37 @@ function encryptAndDisplayResult() {
 
   contenidoInicial.style.display = "none";
   contenidoEncriptado.style.display = "flex";
-}
+} */
 
-/* Add a click event listener to the "Encrypt" button */
-var botonEncriptar = document.querySelector(".boton-encriptar");
-botonEncriptar.addEventListener("click", encryptAndDisplayResult);
+function processText(encryptOrDecrypt) {
+  // show display when the "Encrypt" button is clicked
+  var contenidoInicial = document.querySelector(".encriptador-output-inicial");
+  var contenidoEncriptado = document.querySelector(
+    ".resultado-encriptador-desencriptador"
+  );
+
+  contenidoInicial.style.display = "none";
+  contenidoEncriptado.style.display = "flex";
+
+  // Capture the text from the input textarea
+  const inputTexarea = document.querySelector(".textarea-input");
+  const inputValue = inputTexarea.value;
+
+  // Capture the output textarea
+  const outputTextarea = document.querySelector(".textarea-output");
+
+  if (encryptOrDecrypt === "encrypt") {
+    // Encrypt the input text
+    const encryptedValue = encryptedMessage(inputValue);
+    // Display the encrypt text in te output textarea
+    outputTextarea.value = encryptedValue;
+  } else if (encryptOrDecrypt === "decrypt") {
+    // Decrypt the input text (reverse the encryption)
+    const decryptedValue = decryptedMessage(inputValue);
+    outputTextarea.value = decryptedValue;
+  }
+  //console.log(encryptOrDecrypt);
+}
 
 /* Definition of an object that contains substitutions for vowels. */
 const substitutionVowels = {
@@ -72,3 +98,24 @@ function encryptedMessage(message) {
     })
     .join("");
 }
+
+// Function to decrypt a message based on the reverse substitutions.
+function decryptedMessage(message) {
+  for (var key in substitutionVowels) {
+    var regex = new RegExp(substitutionVowels[key], "g");
+    message = message.replace(regex, key);
+  }
+  return message;
+}
+
+/* Add a click event listener to the "Encrypt" button */
+const botonEncriptar = document.querySelector(".boton-encriptar");
+botonEncriptar.addEventListener("click", function () {
+  processText("encrypt");
+});
+
+/* Add a click event listener to the "Decrypt" button */
+const botonDesencriptar = document.querySelector(".boton-desencriptar");
+botonDesencriptar.addEventListener("click", function () {
+  processText("decrypt");
+});
