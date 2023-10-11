@@ -1,7 +1,9 @@
 function processText(encryptOrDecrypt) {
   // show display when the "Encrypt" button is clicked
-  var contenidoInicial = document.querySelector(".encriptador-output-inicial");
-  var contenidoEncriptado = document.querySelector(
+  const contenidoInicial = document.querySelector(
+    ".encriptador-output-inicial"
+  );
+  const contenidoEncriptado = document.querySelector(
     ".resultado-encriptador-desencriptador"
   );
 
@@ -20,10 +22,12 @@ function processText(encryptOrDecrypt) {
     const encryptedValue = encryptedMessage(inputValue);
     // Display the encrypt text in te output textarea
     outputTextarea.value = encryptedValue;
+    inputTexarea.value = "";
   } else if (encryptOrDecrypt === "decrypt") {
     // Decrypt the input text (reverse the encryption)
     const decryptedValue = decryptedMessage(inputValue);
     outputTextarea.value = decryptedValue;
+    inputTexarea.value = "";
   }
   //console.log(encryptOrDecrypt);
 }
@@ -74,4 +78,30 @@ botonEncriptar.addEventListener("click", function () {
 const botonDesencriptar = document.querySelector(".boton-desencriptar");
 botonDesencriptar.addEventListener("click", function () {
   processText("decrypt");
+});
+
+/* Add a click event listener to the "Copy" button */
+const botonCopiar = document.querySelector(".copy-button");
+const textarea = document.querySelector(".textarea-output");
+
+botonCopiar.addEventListener("click", function () {
+  // Get the text from the textarea
+  const textoParaCopiar = textarea.value;
+
+  // Use the Clipboard API to copy the text to the clipboard
+  navigator.clipboard
+    .writeText(textoParaCopiar)
+    .then(function () {
+      // Change the button text to "Copied" temporarily
+      botonCopiar.textContent = "Copiado";
+
+      // Restore the original text after 2 seconds (2000 milliseconds)
+      setTimeout(function () {
+        botonCopiar.textContent = "Copiar";
+      }, 2000);
+    })
+    .catch(function (error) {
+      // Handle errors, e.g., if the user denies clipboard access
+      console.error("Error copying to clipboard: ", error);
+    });
 });
