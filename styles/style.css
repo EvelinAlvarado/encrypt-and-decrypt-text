@@ -23,6 +23,10 @@ header {
   padding: 5% 0 2.5rem;
 }
 
+.logo-principal {
+  height: 3.5rem;
+}
+
 main {
   /* width: 940px;  */ /*porque comunmente las pantallas tienen 1280px, queremos ocupar el 70% aproximadamente*/
   /* margin: auto; */ /*auto a los lados para que el navegador calcule los espacios si la resolucion de la pantalla no fuese 1280px*/
@@ -254,7 +258,7 @@ main {
     display: inline-block;
     margin: 0 0 0 5%;
     padding-right: 3.5rem;
-    padding-top: 2%;
+    padding-top: 3%;
     padding-bottom: 0%;
   }
 
